@@ -95,7 +95,7 @@ public class ModelReader
             Model model = new Model();
 
             XmlPullParser parser = new MXParser();
-
+            parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, true);
             parser.setInput( reader );
 
             parseModel( model, parser );
